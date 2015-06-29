@@ -9,9 +9,9 @@ let AppLayout = React.createClass({
     render()
     {
         return (
-            <div className="nav">
-                <Link to="app">Home</Link>
-                <Link to="login">Login</Link>
+            <div className='nav'>
+                <Link to='app'>Home</Link>
+                <Link to='about'>About</Link>
                 <RouteHandler/>
             </div>
         );
