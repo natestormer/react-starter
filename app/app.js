@@ -1,8 +1,21 @@
 import React from 'react';
 import Router from 'react-router';
-import { DefaultRoute, Link, Route, RouteHandler } from 'react-router';
 import Routes from './routes.js';
 
-Router.run(Routes, Router.HistoryLocation, function (Handler) {
-    React.render(<Handler/>, document.body);
+React.initializeTouchEvents(true);
+
+let flux     = null;
+let locales  = null;
+let location = Router.HistoryLocation;
+
+Router.run(Routes, location, (Handler) => {
+
+    React.render(
+        React.createElement(Handler, {
+            flux     : flux,
+            locales  : locales
+        }),
+        window.document.body
+    );
+
 });
