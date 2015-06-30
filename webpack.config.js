@@ -11,9 +11,8 @@ var config  = {
 
 module.exports = {
     entry : [
-      'webpack/hot/only-dev-server',
-      './app/app.js',
-      'webpack-dev-server/client?http://localhost:9001'
+      'webpack/hot/dev-server',
+      './app/app.js'
     ],
     output : {
         path     : __dirname + '/build',
